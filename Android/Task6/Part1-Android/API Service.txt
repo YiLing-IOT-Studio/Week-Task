@@ -1,0 +1,55 @@
+服务器基地址: http://114.215.144.204:9090
+
+【登录】
+地址: /login
+描述: 使用用户名和密码进行登录操作
+参数: 	name		用户名		String
+	password	密码		String
+返回: json字符串，如
+	{
+	  "code" : 1,
+	  "msg" : "success",
+	  "data" : {
+	    "id" : 1,
+	    "name" : "wuhaojie",
+	    "password" : "123456",
+	    "age" : 20,
+	    "text" : "一枚大三狗"
+	  }
+	}
+
+【注册】
+地址: /register
+描述: 携带用户信息进行注册操作
+参数: 	name		用户名		String
+	password	密码		String
+	age		年龄		Integer
+	text		描述		String
+返回: json字符串，如
+	{
+	  "code" : 1,
+	  "msg" : "success",
+	  "data" : null
+	}
+
+【获取头像】
+地址: /avatar/xxx
+描述: 获取头像
+参数: url参数	姓名拼音
+返回: 图片流
+实例: 访问 /avatar/wuhaojie 获取wuhaojie的头像
+
+
+
+
+【响应体介绍】
+响应体是一个使用Jackson序列化生成的json字符串，结构如下:
+	{
+	  "code" : 1 / -1,
+	  "msg" : "success"/"error"/"...",
+	  "data" : null/Object
+	}
+Json中由三部分组成:
+	code 状态码	1表示成功 -1表示失败
+	msg  描述信息	描述此次操作结果或者错误信息
+	data 附加数据	返回一个对象，比如登录时返回User对象
