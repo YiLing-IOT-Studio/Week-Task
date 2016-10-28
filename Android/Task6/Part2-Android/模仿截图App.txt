@@ -1,0 +1,20 @@
+难度: ***--
+重要性: ****-
+
+【说明】
+温习AlertDialog的使用，结合前几次作业，练习UI布局，尽量模仿截图中展示的效果。
+
+【要求】
+1. “我的”界面选项依旧需要使用ListView实现，Dialog需要使用自定义布局
+2. “登录”界面的按钮需要设置背景，并且需要有反馈效果
+
+
+【选做】
+1. 设置状态栏、ActionBar的颜色
+2. 将前几次的作业一同组合到本次作业，即实现通过网络来注册和登录
+3. 设置ActionBar的返回按钮
+
+【提示】
+1. AlertDialog有setView()方法可以设置layout布局
+2. 通过selector背景实现带反馈效果的按钮
+3. 通过getSupportActionBar().setDisplayHomeAsUpEnable(...)控制显示ActionBar按钮，然后可以在菜单项回调函数中判断android.R.id.home
